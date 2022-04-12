@@ -4,7 +4,7 @@ import ReactPortal from "../ReactPortal/ReactPortal";
 import classNames from 'classnames';
 
 
-export default function Modal({ children, isOpen, handleClose, targetContainer = null}) {
+export default function Modal({ children, isOpen, handleClose, targetContainer = 'react-portal-wrapper'}) {
   useEffect(() => {
     const closeOnEscapeKey = (e) => e.key === 'Escape' ? handleClose() : null;
     document.body.addEventListener('keydown', closeOnEscapeKey);
@@ -18,11 +18,13 @@ export default function Modal({ children, isOpen, handleClose, targetContainer =
 
   return (
     <ReactPortal wrapperId={targetContainer}>
-      <div className={classNames("modal", {'rounded': !!targetContainer})}>
-        <button onClick={handleClose} className="close-btn">
-          Close
-        </button>
-        <div className="modal-content">{children}</div>
+      <div className={classNames("modal", {'rounded': targetContainer === 'card'})}>
+        <div className="modal-content">
+          <button onClick={handleClose} className="close-btn">
+            X
+          </button>
+          {children}
+        </div>
       </div>
     </ReactPortal>
   );

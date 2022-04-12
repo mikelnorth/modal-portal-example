@@ -3,19 +3,22 @@ import './Card.scss'
 import Modal from '../Modal/Modal';
 
 export default function Card() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [container, setContainer] = useState(null)
+  const [isBodyOpen, setIsBodyOpen] = useState(false)
+  const [targetContainer, setTargetContainer] = useState('react-portal-wrapper')
 
   const openBodyModal = () => {
-    setContainer(null);
-    setIsOpen(true)
+    setTargetContainer('react-portal-wrapper');
+    setTimeout(() => {
+      setIsBodyOpen(true)
+    }, 0);
   }
   const openCardModal = () => {
-    setContainer('card');
-    setIsOpen(true)
-  }
+    setTargetContainer('card');
+    setTimeout(() => {
+      setIsBodyOpen(true)
+    }, 0);  }
 
-  return (
+    return (
     <div className='card' id='card'>
       <header>
         <h1>WELCOME TO YOUR PORTAL EXERCISE</h1>
@@ -34,11 +37,11 @@ export default function Card() {
       <footer>
         <p>Lets try it out!</p>
         <div>
-          <button onClick={openBodyModal}>Open Body Modal</button>
-          <button onClick={openCardModal}>Open Card Modal</button>
+          <button onClick={() => openBodyModal()}>Open Body Modal</button>
+          <button onClick={() => openCardModal()}>Open Card Modal</button>
         </div>
       </footer>
-      <Modal isOpen={isOpen} handleClose={() => setIsOpen(false)}  targetContainer={container}>This is the modal we made</Modal>
+      <Modal isOpen={isBodyOpen} handleClose={() => setIsBodyOpen(false)} targetContainer={targetContainer} >This is the modal we made</Modal>
     </div>
   )
 }
