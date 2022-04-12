@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+.card {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  background: white;
+  border: 5px solid black;
+  border-radius: 35px;
+  width: 600px;
+  max-width: 80%;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  line-height: 24px;
+}
+
+header {
+  font-family: 'Fredericka the Great', cursive;
+  h1 {
+    font-size: 24px;
+  }
+}
+
+ul {
+  li {
+    margin-bottom: 12px;
+  }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  p {
+    font-weight: bold;
+  }
+  button {
+    margin:  12px;
+  }
+}
+
+
+button {
+  background: #20c000;
+  padding: 4px 8px;
+  border-radius: 5px;
+  border: 3px solid black;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    background: #2eff2e;
+  }
+}
