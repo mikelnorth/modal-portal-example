@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import Modal from "../Modal/Modal";
+// import Modal from "../Modal/Modal";
 import "./Card.scss";
 
 export default function Card() {
@@ -41,7 +41,7 @@ export default function Card() {
       </section>
       <footer>
         <p>Lets try it out!</p>
-        <div>
+        <div className='button-container'>
           <button onClick={() => console.log('Open Body Modal')}>Open Body Modal</button>
           <button onClick={() => console.log('Open Card Modal')}>Open Card Modal</button>
         </div>

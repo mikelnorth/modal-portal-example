@@ -20,6 +20,7 @@
 header {
   font-family: "Fredericka the Great", cursive;
   h1 {
+    text-align: center;
     font-size: 24px;
   }
 }
@@ -54,4 +55,14 @@ button {
   &:hover {
     background: #2eff2e;
   }
+}
+
+
+@media screen and (max-width: 500px) {
+  .button-container {
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+ }
 }
