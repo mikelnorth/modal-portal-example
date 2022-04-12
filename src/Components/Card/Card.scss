@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
 .card {
   position: relative;
   overflow: hidden;
@@ -18,7 +18,7 @@
 }
 
 header {
-  font-family: 'Fredericka the Great', cursive;
+  font-family: "Fredericka the Great", cursive;
   h1 {
     font-size: 24px;
   }
@@ -38,10 +38,9 @@ footer {
     font-weight: bold;
   }
   button {
-    margin:  12px;
+    margin: 12px;
   }
 }
-
 
 button {
   background: #20c000;

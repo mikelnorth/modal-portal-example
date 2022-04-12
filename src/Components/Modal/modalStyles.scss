@@ -1,5 +1,4 @@
 .modal {
-  display: inline-block;
   position: absolute;
   inset: 0; /* inset sets all 4 values (top right bottom left) much like how we set padding, margin etc., */
   background-color: rgba(0, 0, 0, 0.6);
@@ -11,14 +10,10 @@
   overflow: hidden;
   z-index: 999;
   padding: 40px 20px 20px;
-  // Add bellow for css transition
-  // opacity: 0;
-  // pointer-events: none;
-  // transform: scale(0.4);
-
-  &.rounded {
-    border-radius: 30px;
-  }
+  // Add bellow for when including css transition group
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.4);
 }
 
 .modal-content {
