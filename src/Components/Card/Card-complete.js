@@ -53,7 +53,7 @@ export default function Card() {
       <footer>
         <p>Lets try it out!</p>
         <div>
-          <button onClick={() => openBodyModal(true)}>Open Body Modal</button>
+          <button onClick={() => openBodyModal()}>Open Body Modal</button>
           <button onClick={() => openCardModal()}>Open Card Modal</button>
         </div>
       </footer>

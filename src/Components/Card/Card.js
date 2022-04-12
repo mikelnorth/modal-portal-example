@@ -1,19 +1,8 @@
-import { useState } from "react";
+// import { useState } from "react";
 import Modal from "../Modal/Modal";
 import "./Card.scss";
 
 export default function Card() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [target, setTarget] = useState(null);
-  const openBodyModal = () => {
-    setTarget("modal-component-wrapper");
-    setIsOpen(true);
-  };
-  const openCardModal = () => {
-    setTarget("card");
-    setIsOpen(true);
-  };
-
   return (
     <div className="card" id="card">
       <header>
@@ -53,17 +42,10 @@ export default function Card() {
       <footer>
         <p>Lets try it out!</p>
         <div>
-          <button onClick={() => openBodyModal(true)}>Open Body Modal</button>
-          <button onClick={() => openCardModal()}>Open Card Modal</button>
+          <button onClick={() => console.log('Open Body Modal')}>Open Body Modal</button>
+          <button onClick={() => console.log('Open Card Modal')}>Open Card Modal</button>
         </div>
       </footer>
-      <Modal
-        isOpen={isOpen}
-        handleClose={() => setIsOpen(false)}
-        targetContainer={target}
-      >
-        This is our Modal!
-      </Modal>
     </div>
   );
 }
