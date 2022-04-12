@@ -1,10 +1,6 @@
-# Getting Started with Create React App
+# Modal Component Using React Portals
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+This project is to show how to create a dynamic modal component using portals.
 
 ### `npm start`
 
