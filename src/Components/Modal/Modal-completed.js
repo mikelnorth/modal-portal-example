@@ -28,8 +28,10 @@ export default function Modal({
         <div
           className='modal'
           ref={nodeRef}
+          aria-modal
+          role="alertdialog"
         >
-          <div className="modal-content">
+          <div className="modal-content" >
             <button onClick={handleClose} className="close-btn">
               X
             </button>
