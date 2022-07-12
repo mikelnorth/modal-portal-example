@@ -23,7 +23,7 @@ function ReactPortal({ children, wrapperId = "react-portal-wrapper" }) {
     setWrapperElement(element);
 
     return () => {
-      // delete the programatically created element
+      // delete the programmatically created element
       if (systemCreated && element.parentNode) {
         element.parentNode.removeChild(element);
       }

@@ -1,8 +1,19 @@
-// import { useState } from "react";
+import { useState } from "react";
 // import Modal from "../Modal/Modal";
 import "./Card.scss";
 
 export default function Card() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [target, setTarget] = useState(null);
+  const openBodyModal = () => {
+    setTarget("modal-component-wrapper");
+    setIsOpen(true);
+  };
+  const openCardModal = () => {
+    setTarget("card");
+    setIsOpen(true);
+  };
+
   return (
     <div className="card" id="card">
       <header>
